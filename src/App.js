@@ -77,6 +77,8 @@ function App() {
 
       <section className="sign">
         <Sign sign={isOpen} />
+        <button onClick={() => setIsOpen(true)}>Open CDC</button>
+        <button onClick={() => setIsOpen(false)}>Close CDC</button>
       </section>
     </div>
   );
