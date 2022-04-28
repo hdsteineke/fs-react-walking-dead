@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 
+import Sign from './Sign';
+
 function App() {
   const [zombieSize, setZombieSize] = useState(3);
   const [humanSize, setHumanSize] = useState(3);
@@ -73,7 +75,9 @@ function App() {
         </div>
       </section>
 
-      <section className="sign"></section>
+      <section className="sign">
+        <Sign sign={isOpen} />
+      </section>
     </div>
   );
 }
