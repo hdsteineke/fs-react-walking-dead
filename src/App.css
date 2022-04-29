@@ -53,7 +53,6 @@ body,
   align-items: center;
   height: 200px;
   margin: 40px;
-  width: 80%;
   border-radius: 50px;
 }
 
@@ -93,28 +92,6 @@ body,
   justify-content: center;
   margin: 20px;
 }
-
-/* .App img {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-  background-size: cover;
-  height: calc(100vh - 80px);
-  align-content: flex-start;
-  width: 800px;
-}
-
-#zombie {
-  width: 130px;
-  height: 150px;
-  margin: 20px;
-}
-
-#human {
-  width: 130px;
-  height: 150px;
-  margin: 20px;
-} */
 
 .fight-button {
   width: 200px;
