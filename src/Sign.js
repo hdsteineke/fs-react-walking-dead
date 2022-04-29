@@ -1,4 +1,5 @@
 import React from 'react';
+import './Sign.css';
 
 export default function Sign({ sign }) {
   return (

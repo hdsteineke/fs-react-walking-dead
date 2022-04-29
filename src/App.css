@@ -73,7 +73,7 @@ body,
 }
 
 .sign {
-  margin: 100px;
+  margin-bottom: 100px;
 }
 
 .zombieParade {
@@ -94,13 +94,17 @@ img {
 }
 
 #zombie {
-  width: 150px;
-  height: 200px;
+  width: 130px;
+  height: 150px;
   margin: 20px;
 }
 
 #human {
-  width: 150px;
-  height: 200px;
+  width: 130px;
+  height: 150px;
   margin: 20px;
+}
+
+.fight-button {
+  width: 200px;
 }

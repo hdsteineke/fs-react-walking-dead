@@ -54,16 +54,16 @@ function App() {
       <section className="fight">
         <div className="zombie">
           <img id="zombie" src="./images/zombie.png" />
-          <button onClick={() => setZombieSize(zombieSize + ATTACK)}>
+          <button className="fight-button" onClick={() => setZombieSize(zombieSize + ATTACK)}>
             Zombie slurps braaiiinnss
           </button>
-          <button onClick={() => setHumanSize(humanSize - ATTACK)}>Zombie shrieks</button>
+          <button className="fight-button" onClick={() => setHumanSize(humanSize - ATTACK)}>Zombie shrieks</button>
         </div>
 
         <div className="human">
           <img id="human" src="./images/human.png" />
-          <button onClick={() => setHumanSize(humanSize + ATTACK)}>Human drinks Gatorade</button>
-          <button onClick={() => setZombieSize(zombieSize - ATTACK)}>
+          <button className="fight-button" onClick={() => setHumanSize(humanSize + ATTACK)}>Human drinks Gatorade</button>
+          <button className="fight-button" onClick={() => setZombieSize(zombieSize - ATTACK)}>
             Human does the truffle shuffle
           </button>
         </div>
