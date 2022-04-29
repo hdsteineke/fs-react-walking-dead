@@ -7,8 +7,8 @@ import ZombieList from './ZombieList';
 import Header from './Header/Header';
 
 function App() {
-  const [zombieSize, setZombieSize] = useState(3);
-  const [humanSize, setHumanSize] = useState(3);
+  const [zombieSize, setZombieSize] = useState(11);
+  const [humanSize, setHumanSize] = useState(7);
   const [isOpen, setIsOpen] = useState(false);
   const [zombieParade, setzombieParade] = useState([
     'zombie1',
@@ -17,14 +17,24 @@ function App() {
     'dumpster',
     'fire',
   ]);
+  
+  const ATTACK = 1;
 
-  const zombieStyle = {
-    fontSize: `${zombieSize}rem`,
-  };
+  function handleZombieAttack() {
+    setHumanSize(humanSize - ATTACK);
+  }
 
-  const humanStyle = {
-    fontSize: `${humanSize}rem`,
-  };
+  function handleHumanAttack() {
+    setZombieSize(zombieSize - ATTACK);
+  }
+
+  function handleZombieGrowth() {
+    setZombieSize(zombieSize + ATTACK);
+  }
+
+  function handleHumanGrowth() {
+    setHumanSize(humanSize + ATTACK);
+  }
 
   function handleAddZombie1() {
     setzombieParade([...zombieParade, 'zombie1']);
@@ -46,24 +56,23 @@ function App() {
     setzombieParade([...zombieParade, 'fire']);
   }
 
-  const ATTACK = 1;
 
   return (
     <div className="App" style={{ backgroundImage: `url(${backgroundImg})` }}>
       <Header headliner="BREAKING NEWS!!! ZOMBIE OUTBREAK!!!" />
       <section className="fight">
         <div className="zombie">
-          <img id="zombie" src="./images/zombie.png" />
-          <button className="fight-button" onClick={() => setZombieSize(zombieSize + ATTACK)}>
+          <img id="zombie" src="./images/zombie.png" width={zombieSize * 10} />
+          <button className="fight-button" onClick={handleZombieGrowth}>
             Zombie slurps braaiiinnss
           </button>
-          <button className="fight-button" onClick={() => setHumanSize(humanSize - ATTACK)}>Zombie shrieks</button>
+          <button className="fight-button" onClick={handleZombieAttack}>Zombie shrieks</button>
         </div>
 
         <div className="human">
-          <img id="human" src="./images/human.png" />
-          <button className="fight-button" onClick={() => setHumanSize(humanSize + ATTACK)}>Human drinks Gatorade</button>
-          <button className="fight-button" onClick={() => setZombieSize(zombieSize - ATTACK)}>
+          <img id="human" src="./images/human.png" width={humanSize * 10} />
+          <button className="fight-button" onClick={handleHumanGrowth}>Human drinks Gatorade</button>
+          <button className="fight-button" onClick={handleHumanAttack}>
             Human does the truffle shuffle
           </button>
         </div>

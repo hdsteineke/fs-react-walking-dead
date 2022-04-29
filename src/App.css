@@ -83,7 +83,7 @@ body,
   margin: 20px;
 }
 
-img {
+/* .App img {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
@@ -103,7 +103,7 @@ img {
   width: 130px;
   height: 150px;
   margin: 20px;
-}
+} */
 
 .fight-button {
   width: 200px;
