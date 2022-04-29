@@ -69,7 +69,7 @@ function App() {
           <button className="fight-button" onClick={handleZombieAttack}>Zombie shrieks</button>
         </div>
 
-        <div className="human">
+        <div className="zombie">
           <img id="human" src="./images/human.png" width={humanSize * 10} />
           <button className="fight-button" onClick={handleHumanGrowth}>Human drinks Gatorade</button>
           <button className="fight-button" onClick={handleHumanAttack}>
