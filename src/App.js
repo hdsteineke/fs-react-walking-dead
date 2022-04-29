@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './App.css';
+import backgroundImg from './background.png';
 
 import Sign from './Sign';
 import ZombieList from './ZombieList';
+import Header from './Header/Header';
 
 function App() {
   const [zombieSize, setZombieSize] = useState(3);
@@ -47,7 +49,8 @@ function App() {
   const ATTACK = 1;
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${backgroundImg})` }}>
+      <Header headliner="BREAKING NEWS!!!" />
       <section className="fight">
         <div className="zombie">
           <p style={zombieStyle}>🧟</p>
