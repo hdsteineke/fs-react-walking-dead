@@ -8,7 +8,7 @@ function App() {
   const [zombieSize, setZombieSize] = useState(3);
   const [humanSize, setHumanSize] = useState(3);
   const [isOpen, setIsOpen] = useState(false);
-  const [zombieArray, setZombieArray] = useState([
+  const [zombieParade, setzombieParade] = useState([
     'zombie1',
     'brain',
     'zombie2',
@@ -25,23 +25,23 @@ function App() {
   };
 
   function handleAddZombie1() {
-    setZombieArray([...zombieArray, 'zombie1']);
+    setzombieParade([...zombieParade, 'zombie1']);
   }
 
   function handleAddBrain() {
-    setZombieArray([...zombieArray, 'brain']);
+    setzombieParade([...zombieParade, 'brain']);
   }
 
   function handleAddZombie2() {
-    setZombieArray([...zombieArray, 'zombie2']);
+    setzombieParade([...zombieParade, 'zombie2']);
   }
 
   function handleAddDumpster() {
-    setZombieArray([...zombieArray, 'dumpster']);
+    setzombieParade([...zombieParade, 'dumpster']);
   }
 
   function handleAddFire() {
-    setZombieArray([...zombieArray, 'fire']);
+    setzombieParade([...zombieParade, 'fire']);
   }
 
   const ATTACK = 1;
@@ -73,7 +73,7 @@ function App() {
       </section>
 
       <section className="zombie-parade">
-        <ZombieList zombies={zombieArray} />
+        <ZombieList zombies={zombieParade} />
         <button onClick={handleAddZombie1}>🧟</button>
         <button onClick={handleAddBrain}>🧠</button>
         <button onClick={handleAddZombie2}>🧟‍♀️</button>
