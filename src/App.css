@@ -7,6 +7,9 @@ body,
 
 .App {
   text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .App-logo {
@@ -46,8 +49,11 @@ body,
 
 .fight {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin: 40px;
+  border-radius: 50px;
 }
 
 .fight p {
@@ -65,6 +71,10 @@ body,
 .zombie {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 200px;
+  width: 200px;
 }
 
 .human {
@@ -73,7 +83,7 @@ body,
 }
 
 .sign {
-  background-color: darkcyan;
+  margin-bottom: 100px;
 }
 
 .zombieParade {
@@ -81,4 +91,8 @@ body,
   flex-direction: row;
   justify-content: center;
   margin: 20px;
+}
+
+.fight-button {
+  width: 200px;
 }
