@@ -92,3 +92,15 @@ img {
   align-content: flex-start;
   width: 800px;
 }
+
+#zombie {
+  width: 150px;
+  height: 200px;
+  margin: 20px;
+}
+
+#human {
+  width: 150px;
+  height: 200px;
+  margin: 20px;
+}

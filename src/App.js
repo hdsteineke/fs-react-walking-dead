@@ -50,10 +50,10 @@ function App() {
 
   return (
     <div className="App" style={{ backgroundImage: `url(${backgroundImg})` }}>
-      <Header headliner="BREAKING NEWS!!!" />
+      <Header headliner="BREAKING NEWS!!! ZOMBIE OUTBREAK!!!" />
       <section className="fight">
         <div className="zombie">
-          <p style={zombieStyle}>🧟</p>
+          <img id="zombie" src="./images/zombie.png" />
           <button onClick={() => setZombieSize(zombieSize + ATTACK)}>
             Zombie slurps braaiiinnss
           </button>
@@ -61,7 +61,7 @@ function App() {
         </div>
 
         <div className="human">
-          <p style={humanStyle}>🙅</p>
+          <img id="human" src="./images/human.png" />
           <button onClick={() => setHumanSize(humanSize + ATTACK)}>Human drinks Gatorade</button>
           <button onClick={() => setZombieSize(zombieSize - ATTACK)}>
             Human does the truffle shuffle
