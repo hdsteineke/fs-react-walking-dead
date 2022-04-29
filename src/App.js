@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 
 import Sign from './Sign';
+import ZombieList from './ZombieList';
 
 function App() {
   const [zombieSize, setZombieSize] = useState(3);
@@ -24,32 +25,22 @@ function App() {
   };
 
   function handleAddZombie1() {
-    zombieArray.push('zombie1');
-
     setZombieArray([...zombieArray, 'zombie1']);
   }
 
   function handleAddBrain() {
-    zombieArray.push('brain');
-
     setZombieArray([...zombieArray, 'brain']);
   }
 
   function handleAddZombie2() {
-    zombieArray.push('zombie2');
-
     setZombieArray([...zombieArray, 'zombie2']);
   }
 
   function handleAddDumpster() {
-    zombieArray.push('dumpster');
-
     setZombieArray([...zombieArray, 'dumpster']);
   }
 
   function handleAddFire() {
-    zombieArray.push('fire');
-
     setZombieArray([...zombieArray, 'fire']);
   }
 
@@ -79,6 +70,15 @@ function App() {
         <Sign sign={isOpen} />
         <button onClick={() => setIsOpen(true)}>Open CDC</button>
         <button onClick={() => setIsOpen(false)}>Close CDC</button>
+      </section>
+
+      <section className="zombie-parade">
+        <ZombieList zombies={zombieArray} />
+        <button onClick={handleAddZombie1}>🧟</button>
+        <button onClick={handleAddBrain}>🧠</button>
+        <button onClick={handleAddZombie2}>🧟‍♀️</button>
+        <button onClick={handleAddDumpster}>🗑️</button>
+        <button onClick={handleAddFire}>🔥</button>
       </section>
     </div>
   );
