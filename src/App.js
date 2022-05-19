@@ -1,11 +1,18 @@
 import { useState } from 'react';
 import './App.css';
 import backgroundImg from './background.png';
+import { BrowserRouter as Router,
+  Switch, 
+  NavLink,
+  Route,
+  Redirect, 
+} from 'react-router-dom';
 
 import Sign from './Sign';
 import ZombieList from './ZombieList';
 import Header from './Header/Header';
 import CustomButton from './CustomButton';
+import Admin from './Admin';
 
 function App() {
   const [zombieSize, setZombieSize] = useState(11);
@@ -59,13 +66,28 @@ function App() {
 
 
   return (
+
+    <><Router>
+      <div>
+        <Switch>
+
+          <Route exact path="/admin">
+            <Admin />
+          </Route>
+          <Route exact path="/">
+            <App />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+    
     <div className="App" style={{ backgroundImage: `url(${backgroundImg})` }}>
       <Header headliner="BREAKING NEWS!!! ZOMBIE OUTBREAK!!!" />
       <section className="fight">
         <div className="zombie">
           <img id="zombie" src="./images/zombie.png" width={zombieSize * 10} />
           <CustomButton className="fight-button" onClick={handleZombieGrowth}>
-            Zombie slurps braaiiinnss
+              Zombie slurps braaiiinnss
           </CustomButton>
           <CustomButton className="fight-button" onClick={handleZombieAttack}>Zombie shrieks</CustomButton>
         </div>
@@ -74,7 +96,7 @@ function App() {
           <img id="human" src="./images/human.png" width={humanSize * 10} />
           <CustomButton className="fight-button" onClick={handleHumanGrowth}>Human drinks Gatorade</CustomButton>
           <CustomButton className="fight-button" onClick={handleHumanAttack}>
-            Human does the truffle shuffle
+              Human does the truffle shuffle
           </CustomButton>
         </div>
       </section>
@@ -93,7 +115,7 @@ function App() {
         <CustomButton onClick={handleAddDumpster}>🗑️</CustomButton>
         <CustomButton onClick={handleAddFire}>🔥</CustomButton>
       </section>
-    </div>
+    </div></>
   );
 }
 
