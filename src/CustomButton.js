@@ -3,6 +3,6 @@ import Button from '@mui/material/Button';
 
 export default function CustomButton({ children, onClick }) {
   return (
-    <Button onClick={onClick} variant="contained">{children}</Button>
+    <Button className='custom-button' onClick={onClick} variant="contained">{children}</Button>
   );
 }

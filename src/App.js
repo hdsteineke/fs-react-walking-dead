@@ -73,25 +73,25 @@ function App() {
         <div className="zombie">
           <img id="human" src="./images/human.png" width={humanSize * 10} />
           <CustomButton className="fight-button" onClick={handleHumanGrowth}>Human drinks Gatorade</CustomButton>
-          <button className="fight-button" onClick={handleHumanAttack}>
+          <CustomButton className="fight-button" onClick={handleHumanAttack}>
             Human does the truffle shuffle
-          </button>
+          </CustomButton>
         </div>
       </section>
 
       <section className="sign">
         <Sign sign={isOpen} />
-        <button onClick={() => setIsOpen(true)}>Open CDC</button>
-        <button onClick={() => setIsOpen(false)}>Close CDC</button>
+        <CustomButton onClick={() => setIsOpen(true)}>Open CDC</CustomButton>
+        <CustomButton onClick={() => setIsOpen(false)}>Close CDC</CustomButton>
       </section>
 
       <section className="zombie-parade">
         <ZombieList zombies={zombieParade} />
-        <button onClick={handleAddZombie1}>🧟</button>
-        <button onClick={handleAddBrain}>🧠</button>
-        <button onClick={handleAddZombie2}>🧟‍♀️</button>
-        <button onClick={handleAddDumpster}>🗑️</button>
-        <button onClick={handleAddFire}>🔥</button>
+        <CustomButton onClick={handleAddZombie1}>🧟</CustomButton>
+        <CustomButton onClick={handleAddBrain}>🧠</CustomButton>
+        <CustomButton onClick={handleAddZombie2}>🧟‍♀️</CustomButton>
+        <CustomButton onClick={handleAddDumpster}>🗑️</CustomButton>
+        <CustomButton onClick={handleAddFire}>🔥</CustomButton>
       </section>
     </div>
   );

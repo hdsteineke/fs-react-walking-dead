@@ -96,3 +96,7 @@ body,
 .fight-button {
   width: 200px;
 }
+
+.custom-button {
+  height: 50px;
+}
