@@ -5,6 +5,7 @@ import backgroundImg from './background.png';
 import Sign from './Sign';
 import ZombieList from './ZombieList';
 import Header from './Header/Header';
+import CustomButton from './CustomButton';
 
 function App() {
   const [zombieSize, setZombieSize] = useState(11);
@@ -63,15 +64,15 @@ function App() {
       <section className="fight">
         <div className="zombie">
           <img id="zombie" src="./images/zombie.png" width={zombieSize * 10} />
-          <button className="fight-button" onClick={handleZombieGrowth}>
+          <CustomButton className="fight-button" onClick={handleZombieGrowth}>
             Zombie slurps braaiiinnss
-          </button>
-          <button className="fight-button" onClick={handleZombieAttack}>Zombie shrieks</button>
+          </CustomButton>
+          <CustomButton className="fight-button" onClick={handleZombieAttack}>Zombie shrieks</CustomButton>
         </div>
 
         <div className="zombie">
           <img id="human" src="./images/human.png" width={humanSize * 10} />
-          <button className="fight-button" onClick={handleHumanGrowth}>Human drinks Gatorade</button>
+          <CustomButton className="fight-button" onClick={handleHumanGrowth}>Human drinks Gatorade</CustomButton>
           <button className="fight-button" onClick={handleHumanAttack}>
             Human does the truffle shuffle
           </button>
