@@ -7,6 +7,7 @@ import { BrowserRouter as Router,
   Route,
   Redirect, 
 } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Sign from './Sign';
 import ZombieList from './ZombieList';
@@ -68,19 +69,31 @@ function App() {
   return (
 
     <>
-      {/* <Router>
+      <Router>
         <div>
+          <header>
+            <nav>
+              <ul>
+                <li>
+                  <Link exact to='/'>Home</Link>
+                </li>
+                <li>
+                  <Link exact to='/admin'>Admin</Link>
+                </li>
+              </ul>
+            </nav>
+          </header>
           <Switch>
 
             <Route exact path="/admin">
               <Admin />
             </Route>
             <Route exact path="/">
-              <App />
+              
             </Route>
           </Switch>
         </div>
-      </Router> */}
+      </Router>
     
       <div className="App" style={{ backgroundImage: `url(${backgroundImg})` }}>
         <Header headliner="BREAKING NEWS!!! ZOMBIE OUTBREAK!!!" />
