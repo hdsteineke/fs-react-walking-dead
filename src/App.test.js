@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 import Zombie from './Zombie';
+import ZombieList from './ZombieList';
 
 test('', () => {
   render(<App />);
@@ -46,23 +47,32 @@ test('when I click Close CDC, I expect to see the words you are on your own', ()
 
 
 
-
-
-
-
-// test('specific zombie emoji is rendered based on prop that is passed', () => {
-//   render(<Zombie zombie='zombie1' />);
-
-//   const zombie1Emoji = screen.getByText(/🧠/i);
-//   expect(zombie1Emoji).not.toBeInTheDocument();
-// });
-
-
-
-
 // test('', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/Zombie slurps/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
+//   render(<ZombieList zombies={['zombie1', 'brain', 'zombie2', 'dumpster', 'fire']}/>);
+
+//   const zombie1Emoji = screen.getAllByText(/🧟/i);
+//   expect(zombie1Emoji).toBeInTheDocument();
+
+//   const brainEmoji = screen.getAllByText(/🧠/i);
+//   expect(brainEmoji).toBeInTheDocument();
+
+//   const zombie2Emoji = screen.getAllByText(/🧟‍♀️/i);
+//   expect(zombie2Emoji).toBeInTheDocument();
+
+//   const dumpsterEmoji = screen.getAllByText(/🗑️/i);
+//   expect(dumpsterEmoji).toBeInTheDocument();
+
+//   const fireEmoji = screen.getAllByText(/🔥/i);
+//   expect(fireEmoji).toBeInTheDocument();
   
+// });
+
+
+
+test('specific zombie emoji is rendered based on prop that is passed', () => {
+  render(<Zombie zombie='brain' />);
+
+  const brainEmoji = screen.getByText(/🧠/i);
+  expect(brainEmoji).toBeInTheDocument();
+});
+
