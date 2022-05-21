@@ -1,10 +1,10 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 import Zombie from './Zombie';
-import ZombieList from './ZombieList';
+import Home from './Home';
 
 test('', () => {
-  render(<App />);
+  render(<Home />);
   const linkElement = screen.getByText(/Zombie slurps/i);
   expect(linkElement).toBeInTheDocument();
 });
@@ -19,7 +19,7 @@ test('specific zombie emoji is rendered based on prop that is passed', () => {
 
 
 test('when I click Open CDC, I expect to see the word Nope!', () => {
-  render(<App />);
+  render(<Home />);
 
   const openCDCButton = screen.queryByText(/Open CDC/i);
 
@@ -34,7 +34,7 @@ test('when I click Open CDC, I expect to see the word Nope!', () => {
 
 
 test('when I click Close CDC, I expect to see the words you are on your own', () => {
-  render(<App />);
+  render(<Home />);
 
   const closeCDCButton = screen.queryByText(/Close CDC/i);
 
