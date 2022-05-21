@@ -1,5 +1,6 @@
 import React from 'react';
 import MaterialTable from 'material-table';
+import { data } from './data.js';
 
 export default function MyTable() {
 
@@ -7,13 +8,14 @@ export default function MyTable() {
     <div style={{ maxWidth: '100%' }}>
       <MaterialTable
         columns={[
-          { title: 'Adı', field: 'name' },
-          { title: 'Soyadı', field: 'surname' },
-          { title: 'Doğum Yılı', field: 'birthYear', type: 'numeric' },
-          { title: 'Doğum Yeri', field: 'birthCity', lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' } }
+          { title: 'First Name', field: 'first_name' },
+          { title: 'Last Name', field: 'last_name' },
+          { title: 'Gender', field: 'birthYear', type: 'numeric' },
+          { title: 'Email', field: 'birthCity' },
+          { title: 'IP Address', field: 'ip_address' }
         ]}
-        data={[{ name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 }]}
-        title="Demo Title"
+        data={data}
+        title="Customer Data"
       />
     </div>
   );
