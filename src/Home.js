@@ -2,13 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import backgroundImg from './background.png';
-import { BrowserRouter as Router,
-  Switch, 
-  NavLink,
-  Route,
-  Redirect, 
-} from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 
 import Sign from './Sign';
 import ZombieList from './ZombieList';

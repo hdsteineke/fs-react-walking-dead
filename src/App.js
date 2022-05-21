@@ -35,6 +35,8 @@ function App() {
           <Switch>
 
             <Route exact path="/">
+              <Admin />
+
             </Route>
             <Route exact path="/zombies">
               <Home />
