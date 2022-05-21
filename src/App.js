@@ -1,14 +1,10 @@
-import { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router,
   Switch, 
-  NavLink,
   Route,
-  Redirect, 
 } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import CustomButton from './CustomButton';
 import Admin from './Admin';
 import Home from './Home';
 
